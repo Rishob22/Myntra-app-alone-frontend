@@ -13,7 +13,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    /* when the path is '/'->root path,then the App component will be rendered */
     children: [
+      //under the main route,there are child routes which
       { path: "/", element: <Home /> },
       {
         path: "/bag",
@@ -25,7 +27,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={myntraStore}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} />{" "}
+      {/* router object passed to the RouterProvider */}
     </Provider>
   </React.StrictMode>
 );

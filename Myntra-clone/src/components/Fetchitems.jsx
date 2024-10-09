@@ -19,7 +19,7 @@ const FetchItems = () => {
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
         dispatch(fetchStatusActions.markFetchingFinished());
-        dispatch(itemsActions.addInitialItems(items[0]));
+        dispatch(itemsActions.addInitialItems(items));
       });
 
     return () => {
